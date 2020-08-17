@@ -27,3 +27,5 @@ jobs:
       with:
         tag: 1.4.0
         name: 1.4.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
