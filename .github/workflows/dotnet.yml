@@ -1,0 +1,22 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Release Drafter
+      uses: release-drafter/release-drafter@v5.11.0
+      with:
+        name: 1.5.0
+        tag: 1.5.0
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
